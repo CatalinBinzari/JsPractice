@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js">
+		</script>
+	<script type="text/babel">
+	var cat = {
+		meaw: function(times) {
+		console.log(Array(times+1).join("meaw"));
+		},
+		purr: function(times) {
+		console.log(Array(times+1).join("purr"));
+		},
+		snore: function(times) {
+		console.log(Array(times+1).join("snore"));
+		}
+	};
+	var cat = {
+		meaw(times) {
+			console.log("meaw".repeat(times));
+		},
+		purr(times) {
+			console.log("purr".repeat(times));
+		},
+		snore(times) {
+			console.log("snore".repeat(times));
+		}
+	};
+	cat.meaw(4);
+	cat.purr(1);
+	//cat.snore(-3);
+	</script>
+	<title>enhancing object literals</title>
+</head>
+<body>
+</body>
+</html>
