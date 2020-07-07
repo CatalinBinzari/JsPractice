@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js">
+		</script>
+	<script type="text/babel">
+		for(let letter of 'JavaScript'){
+			console.log(letter);
+		}
+
+		var topics = ['JavaScript', 'Node', 'React'];
+
+		for(let topic of topics) {
+			console.log(topic);
+		}
+
+		 var topics = new Map();
+		 topics.set('html','/class/html');
+		 topics.set('css','/class/css');
+		 topics.set('js','/class/js');
+		 topics.set('node','/class/node');
+
+		 for(let topic of topics.values()) {
+		 	console.log(topic);
+		}
+		for(let topic of topics.keys()) {
+		 	console.log(topic);
+		}
+		for(let course of topics.entries()) {
+		 	console.log(course);
+		}
+	</script>
+	<title>for..of loop</title>
+</head>
+<body>
+</body>
+</html>
