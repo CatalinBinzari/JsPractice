@@ -4,11 +4,30 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js">
 		</script>
 	<script type="text/babel">
-		var course = new Map();
+		var course = new Map(); // create a course variable 
 		course.set('react', {description: 'ui'});
+		course.set('jest', {description: 'testing'});
 
+		console.log(course);
+		console.log(course.react);
+		console.log(course.get('react'));
+
+		var details = new Map([
+			[new Date(), 'today'],
+			['items', [1, 2]]
+		]);
+
+		console.log(details.size);
+		console.log(details);
+		details.forEach(function(item){
+			console.log(item);
+		})
+
+		const array1 = ['a', 'b', 'c'];
+		array1.forEach( function(item){
+			console.log(item);});
 	</script>
-	<title>Spread operator</title>
+	<title>Maps</title>
 </head>
 <body>
 </body>
