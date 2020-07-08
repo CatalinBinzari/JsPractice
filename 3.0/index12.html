@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js">
+		</script>
+	<script type="text/babel">
+		var [first,,, fourth, fivth] = ["Spokane", "Boston", "Los Angeles", "Settle", "Portland"]
+		console.log(fivth);
+
+
+		/*
+		var sandwich = {
+			title: "rouben",
+			price: 7,
+			description: "Cleveland's favorite sandwich",
+			ingredients: ['bread', 'corned beef', 'dressing', 'sauerkraut', 'cheese']
+		};		
+		console.log(sandwich.title);
+		console.log(sandwich.price);
+		*/
+		var {title, price, description, ingredients} = {
+			title: "rouben",
+			price: 7,
+			description: "Cleveland's favorite sandwich",
+			ingredients: ['bread', 'corned beef', 'dressing', 'sauerkraut', 'cheese']
+		};
+		console.log(description);
+		console.log(ingredients);	
+
+		var vacantion = {
+			destination: "Chile",
+			travelers: 2,
+			activity: "Skiing",
+			cost: 4000
+		}
+		function vacantionMarketin({destination, activity}){
+			return `Come to ${destination} and do ${activity}`;
+		}
+		console.log(vacantionMarketin(vacantion));
+		
+	</script>
+	<title>destructing assignment</title>
+</head>
+<body>
+</body>
+</html>

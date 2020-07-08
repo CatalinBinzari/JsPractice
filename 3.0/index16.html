@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js">
+		</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser-polyfill.js">
+		</script>
+	<script type="text/babel">
+		function loadScript(src, callback) {
+		  let script = document.createElement('script');
+		  //console.log('tes1' + script);
+		  script.src = src;
+		  script.onload = () => callback(script);
+		  //console.log('tes2' + script);
+		  document.head.append(script);
+		}
+
+		loadScript('https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js', script => {
+		  alert(`Cool, the script ${script.src} is loaded`);
+		  alert( _ ); // function declared in the loaded script
+		});
+	</script>
+	</script>
+	<title>promises</title>
+</head>
+<body>
+</body>
+</html>

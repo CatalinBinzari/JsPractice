@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js">
+		</script>
+	<script type="text/babel">
+		var person = {
+			first: "Doug",
+			actions: ['bike', 'hike', 'ski', 'surf'],
+			printActions: function(){
+				var _this = this;
+				console.log(this);
+				console.log(_this);
+				this.actions.forEach(function(action) {
+					console.log( this);
+					console.log(_this);
+					var str = _this.first + " likes to " + action;
+					console.log(str);
+				});
+			}}
+			/*
+			//parse to arrow function
+			printActions() {
+				this.actions.forEach(action => {
+					var str = this.first + " likes to " + action;
+					console.log(str);
+				});
+			}
+			
+		};
+		*/
+		person.printActions();
+	</script>
+	<title>arrow functions with 'this'</title>
+</head>
+<body>
+</body>
+</html>
