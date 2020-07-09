@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		 const delay = seconds => {
+		 	return new Promise(
+		 		resolve => setTimeout(resolve, seconds * 1000)
+		 	)
+			}
+		//for using async functions, we use async keyword
+		const countToFive = async () => {
+			console.log('zero seconds');
+			await delay(1);// await waits execution of delay(1) to go further
+			console.log('one seconds');
+			await delay(2);
+			console.log('two seconds');
+			await delay(5);
+			console.log('five seconds');
+			//await - waits  return of delay(1), called with 1 second 
+			//to be returned before executing any further
+		};
+		countToFive();
+	</script>
+	</script>
+	<title>Async and await</title>
+</head>
+<body>
+</body>
+</html>

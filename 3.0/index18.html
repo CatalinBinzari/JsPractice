@@ -20,12 +20,12 @@
 					}
 			};
 			request.onerror = err => rejects(err);
-			request.send();
+			request.send(); // returns when response has arrived
 		});
 	};
 
 	spacePeople().then(
-		spaceData => console.log(spaceData),
+		spaceData => console.log(spaceData), //in caz ca nu are error
 		err => console.error(
 			new Error('cannot load space people')
 			)

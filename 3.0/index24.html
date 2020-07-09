@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		var attendance = { // ce e attendance
+			_list: [],
+		 	set addName(name) {
+				this._list.push(name);
+			},
+			get list() {
+				return this._list.join(', ');
+			}
+		};
+		console.log(typeof attendance);
+
+		attendance.addName = 'Joanne';
+		attendance.addName = 'Petru';
+		console.log(attendance.list);
+		console.log(attendance._list);
+
+		console.log('====================== Classes');
+
+		class Hike {
+			constructor(distance, pace) {
+				this.distance = distance;
+				this.pace = pace;
+			}
+			get lengthInHours() {
+				return `${this.calcLength()} hours`;
+			}
+			calcLength() {
+				return this.distance / this.pace;
+			}
+		}
+		const mtTallac = new Hike(10, 2);
+		console.log(mtTallac.lengthInHours);
+	</script>
+	<title>Setter and getter</title>
+</head>
+<body>
+</body>
+</html>

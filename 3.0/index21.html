@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		 const githubRequest = async(loginName) => {
+		 	try{
+		 		var response = await fetch(`https://api.github.com/users/${loginName}/subscriptions`);
+		 		var json = await response.json();
+				var followerList = json.map(user => user.name); //for followerList return a array of logins
+				console.log(followerList);
+		 	} catch(e) {
+				console.log("Data didn't load:", e);
+			}
+		 };
+		 githubRequest('CatalinBinzari');
+
+
+		 //make an anonymus function
+		 (async(loginName) => {
+		 	try{
+		 		var response = await fetch(`https://api.github.com/users/${loginName}/followers`);
+		 		var json = await response.json();
+				var followerList = json.map(user => user.login); //for followerList return a array of logins
+				console.log(followerList);
+		 	} catch(e) {
+				console.log("Data didn't load:", e);
+			}
+		 })('eveporcello');
+	</script>
+	<title>Async and fetch</title>
+</head>
+<body>
+</body>
+</html>
