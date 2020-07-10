@@ -1,0 +1,24 @@
+Components are the building blocks of any React app and a typical React app will have many of these. 
+	Simply put, a component is a JavaScript class or function
+	that optionally accepts inputs i.e. properties(props) and returns a React element that describes
+	how a section of the UI (User Interface) should appear.
+
+DOM(document object model) to create Nodes using JS.
+	vizualizarea din puntul de vedere a JavaScript-ului a tuturor tagurilor html,
+	 ca fiind obiecte din care vin alte obiecte.
+	 JS poate vedea obiectele si sa le manipuleze folosind diverse functii
+	 ex. Daca vrem sa modificam titlul, putem accesa obiectul Title din DOM si sa apelam functia de schimbare
+	Sunt 3 tipuri de Nodes: element node, attribute node, text node
+
+JSX ??
+
+JSX Components
+	bits of code reutilisable.
+	servesc ca JS functii, dar lucreaza in izolare si returneaza HTML 
+
+functia render();
+in care indicam ce element cream si  id-ul divului unde vrem sa incadram acest element
+
+functia React.createElement() si utilizarea a 3 argumente(tip("div"/"h1"), proprietati(poate fi null), child(poate fi un element sau string))
+
+utilizarea nested elements prin apelarea recursiva a functiei React.createElement();

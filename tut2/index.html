@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React Project</title>
+        <script src ="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+        <script src ="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/javascript">
+			/*
+				render( what type of element i want to create, where i want to add created element)
+				createElement(
+				1-st argument - h1
+				2-th argument - properties, poate fi null, {"h1", {"style": {"red"}}, "hello world"}
+				3-rd argument - child element
+				)
+			*/
+        	ReactDOM.render(
+        		React.createElement(
+        			"h1",
+				  	{"style": {"color": "green"}},
+        		  	"hello world"
+        		),
+        		document.getElementById("root")
+        		);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+DONE:
+Intelegerea a ce reprezinta Components - cai de reprezentare a UI
+	(blocuri de cod(JS clasa sau functie)
+ 	a oricarei aplicatii React ce pot fi reapelate ce returneaza un react element )
+
+Intelegerea a ce reprezinta DOM(document object model) - structura de obiecte ce pot fi
+ vazuta/manipulata cu JS ca Nodes(element, attribute, text)
+
+JSX(JavaScript XML) permite sa scriem cod HTML in React, convertind tagurile in elemente react
+
+JSX Components
+	bits of code reutilisable.
+	servesc ca JS functii, dar lucreaza in izolare si returneaza HTML 
+
+functia render();
+in care indicam ce element cream si  id-ul divului unde vrem sa incadram acest element
+
+functia React.createElement() si utilizarea a 3 argumente(tip("div"/"h1"), proprietati(poate fi null), child(poate fi un element sau string))
+
+utilizarea nested elements prin apelarea recursiva a functiei React.createElement();
+
+intelegerea sintaxei JSX (utilizarea style cu id si className, folosirea variabilelor) 
+
+apelarea components ca taguri ce urmeaza sa fie rendered
+
+folosirea components cu functii
+
+props(obiecte ce contin proprietatile components) folosite pentru a afisa dinamic date intr-un compoenent
+
+apelarea mai multor compoents dintr-o functie 
+
+apelarea componentelor dintr-o clasa si importanta metodei render() {}
+
+intelegerea instantei 'state' ca un set ce controleaza comportamentul unui component, 
+tinand in el informatia ce poate schimba ciclul de viata al componentului
+
+schimbarea elementelor din state folosind clasa Components prin apasarea butoanelor, fara a se face refresh la pagina
+
+folosirea component cu functii, utilizarea multiple components conditional in functie de o variabila boolean ce o pasam ca prop
+
+utilizarea unei liste cu strings ca prop intr-un component si folosirea key-ului pentru fiecare element pentru a evita warnings
+
+utilizarea unei liste cu obiecte ca prop intr-un component, folosirea key-ului pentru fiecare element, sau utilizarea id-ului fiecarui object
+pentru a evita warnings
+
+am terminat tutoriale pana la 5.2
+
+TO CONTINUE:
+fixarea problemelor cu instalarea si pornirea serverului local react
+
+
+
+
+
+
+
+
+
+
