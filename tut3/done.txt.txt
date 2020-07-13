@@ -1,0 +1,22 @@
+Utilizarea unul array de obiecte ca props, si parcurgerea fiecarui element din el.
+Intelegerea metodey .bind()
+Utilizarea consturctorului intr-o clasa
+Utilizarea setState() si idee prin care putem prelua valoare din state si a o meodifica
+Ideea de a face ca butonul sa dispara dupa apasarea sa 
+Utilizarea React.Children.only, 
+Intelegerea ca in <MyComponent prop />, prop by default is true, si ca sunt 2 cai ca prop sa fie true si doar una ca sa fie false
+Accesarea Component.Children in corpul componentului
+Uncontrolled components
+Controlled components
+Utilizarea React.Fragment si sintaxa scurta <>, </>
+Utilizarea Fragment cu key pentru fiecare obiect luat cu .map()
+Revizuirea lifecycle unui component
+Setarea unui state la radacina, si transimeterea datelor prin arbore din state prin props
+
+
+TO LEARN:
+metodele din React.Children 
+cultura generala despre ref; https://reactjs.org/docs/refs-and-the-dom.html
+
+TO DO:
+experimentare cu fiecare metoda din component lifecycle

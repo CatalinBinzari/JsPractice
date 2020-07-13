@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  </head>
+  <div id="root"></div>
+  <script type="text/babel">
+    const NowEating = (props) => <h1>{props.meal}</h1>; //components to display meal
+
+    class Menu extends React.Component {
+      state = {
+        meal: "Spaghetti",
+      };
+      // constructor(
+      //   props //consturctur for initial states
+      // ) {
+      //   super(props); //constructor always takes props
+      //   this.state = {
+      //     //to initialize our states
+      //     meal: "Spaghetti",
+      //   };
+      //   this.addSideDish = this.addSideDish.bind(this);
+      // }
+
+      addSideDish = () => {
+        //method to set the state
+        // this.setState({
+        //   meal: "Spagetty and salad",
+        // });
+        this.setState((prevState) => {
+          //setState is asynchronus
+          //preia valoarea deja ce se alfa in state.meal si returneaza alta
+          return { meal: `${prevState.meal} & Salad` };
+        });
+      };
+      render() {
+        //return JSX
+        return (
+          <div>
+            <NowEating meal={this.state.meal} />
+            {
+              this.state.meal === "Spaghetti" ? (
+                <button onClick={this.addSideDish}>Add Side Dish</button>
+              ) : null // we dont want button to be slicked again after we click it once
+            }
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(<Menu />, document.getElementById("root"));
+  </script>
+</html>

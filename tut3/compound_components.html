@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  </head>
+  <div id="root"></div>
+  <script type="text/babel">
+    const Display = (
+      { ifTruthy = false, children } //ifTruthy is default argument is true
+    ) => (
+      console.log(ifTruthy),
+      ifTruthy
+        ? React.Children.only(children) //make sure if Children only has one child and is going to return it, or return null
+        : null
+    );
+    const age = 18;
+    ReactDOM.render(
+      //render ce(Componentul) si unde
+
+      //if is true
+      <Display ifTruthy>
+        <h1>You can vote</h1>
+      </Display>,
+      document.getElementById("root")
+    );
+  </script>
+</html>
