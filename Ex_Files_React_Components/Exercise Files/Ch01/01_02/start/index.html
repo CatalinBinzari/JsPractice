@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  </head>
+  <div id="root"></div>
+  <script type="text/babel">
+    const data = [
+      { greeting: "hello!", id: 1 },
+      { greeting: "yo!", id: 2 },
+      { greeting: "salut!", id: 3 },
+    ];
+
+    const Greetings = ({ data }) => {
+      //function components that return an array
+      return data.map((item) => {
+        return <li key={item.id}>{item.greeting}</li>;
+      });
+    };
+
+    ReactDOM.render(
+      <Greetings data={data} />,
+      //  mount component Greetings to root element
+      document.getElementById("root")
+    );
+  </script>
+</html>

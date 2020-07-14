@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  </head>
+  <div id="root"></div>
+  <script type="text/babel">
+    //we put states at the root in the tree, and then pass down state data with props
+
+    const Trail = (props) => <div>{props.name}</div>;
+
+    const Lift = (props) => (
+      <div>
+        <Trail name={props.name} />
+      </div>
+    );
+    class Resort extends React.Component {
+      state = {
+        name: "Snowtootth Mountain",
+      };
+      render() {
+        return (
+          <div>
+            <Lift name={this.state.name} />
+          </div>
+        );
+      }
+    }
+    ReactDOM.render(<Resort />, document.getElementById("root"));
+  </script>
+</html>
